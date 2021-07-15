@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+	  
+	  <table>
+	  <tr><td>ID: </td><td th:text ="${country.id}"></td></tr>
+	  <tr><td>Country Name: </td><td th:text ="${country.name}"></td></tr>
+	  <tr><td>Capital: </td><td th:text ="${country.capital}"></td></tr>
+	  <tr><td>Population: </td><td th:text ="${country.population}"></td></tr>
+	  </table>
+	  <a href="/list_countries"><button type="button">Go Back</button></a>
+</html>

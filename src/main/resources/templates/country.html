@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+	  
+	  <table>
+	  <tr>Country Name</tr>
+	  <tr th:each="country : ${countries}">
+	  
+	  <td><a th:href="@{/list_details/{id}(id=${country.id})}" th:text ="${country.name}"></a></td>
+
+	  &nbsp;&nbsp;&nbsp;&nbsp;
+	  <td> <a th:href="@{/delete/{id}(id=${country.id})}"><button type="button">Delete Country</button></a>
+	  &nbsp;&nbsp;&nbsp;&nbsp;
+	  <td> <a th:href="@{/edit/{id}(id=${country.id})}"><button type="button">Edit Population</button></a>
+	  </tr>
+	  </table>
+	  <a href="/add"><button type="button">Add Country</button></a>
+</html>
